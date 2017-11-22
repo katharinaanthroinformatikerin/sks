@@ -28,6 +28,5 @@ public class FilmWebService {
     public String importFilms(List<Film> filmsToImport){
         log.info("in Methode importFilms()." + filmsToImport.size());
         return filmservice.importFilms(filmsToImport);
-
     }
 }

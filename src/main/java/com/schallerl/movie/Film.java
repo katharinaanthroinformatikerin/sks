@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-
 @NamedQuery(name = "Film.searchByTitleParts", query = "SELECT f FROM Film f WHERE f.title LIKE :titleParts")
 @Entity
 @Table(name = "film")

@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 import java.util.Set;
 
+@NamedQuery(name = "Studio.checkDependencyStudio", query = "SELECT s FROM Studio s WHERE s.name = :studioName")
 @Entity
 @Table(name = "studio")
 public class Studio {
@@ -25,4 +26,52 @@ public class Studio {
     private Set<Actor> actors;
 
     public Studio(){}
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
+    }
+
+    public Set<Film> getFilms() {
+        return films;
+    }
+
+    public void setFilms(Set<Film> films) {
+        this.films = films;
+    }
+
+    public Set<Actor> getActors() {
+        return actors;
+    }
+
+    public void setActors(Set<Actor> actors) {
+        this.actors = actors;
+    }
 }

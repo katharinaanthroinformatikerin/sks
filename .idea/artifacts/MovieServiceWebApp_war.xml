@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MovieServiceWebApp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="MovieServiceWebApp.war">
+      <element id="artifact" artifact-name="MovieServiceWebApp:war exploded" />
+    </root>
+  </artifact>
+</component>

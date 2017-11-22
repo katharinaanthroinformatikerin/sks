@@ -1,7 +1,6 @@
 package com.schallerl.movie;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @NamedQuery(name = "Studio.checkDependencyStudio", query = "SELECT s FROM Studio s WHERE s.name = :studioName")
@@ -12,18 +11,18 @@ public class Studio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String street;
-    private String zipcode;
+    private String countrycode;
+    private String postcode;
 
-    @OneToMany(mappedBy = "studio")
-    private Set<Film> films;
-
-    @ManyToMany
+    /*@OneToMany(mappedBy = "studio")
+    private Set<Movie> movies;
+*/
+    /*@ManyToMany
     @JoinTable(
             name="studio_actor",
             joinColumns=@JoinColumn(name="studio_id", referencedColumnName="id", foreignKey = @ForeignKey(name="fk_studio_actor_studio")),
             inverseJoinColumns=@JoinColumn(name="actor_id", referencedColumnName="id", foreignKey = @ForeignKey(name="fk_studio_actor_actor")))
-    private Set<Actor> actors;
+    private Set<Actor> actors;*/
 
     public Studio(){}
 
@@ -43,35 +42,27 @@ public class Studio {
         this.name = name;
     }
 
-    public String getStreet() {
-        return street;
+    public String getCountrycode() {
+        return countrycode;
     }
 
-    public void setStreet(String street) {
-        this.street = street;
+    public void setCountrycode(String street) {
+        this.countrycode = street;
     }
 
-    public String getZipcode() {
-        return zipcode;
+    public String getPostcode() {
+        return postcode;
     }
 
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
+    public void setPostcode(String zipcode) {
+        this.postcode = zipcode;
+    }
+/*
+    public Set<Movie> getMovies() {
+        return movies;
     }
 
-    public Set<Film> getFilms() {
-        return films;
-    }
-
-    public void setFilms(Set<Film> films) {
-        this.films = films;
-    }
-
-    public Set<Actor> getActors() {
-        return actors;
-    }
-
-    public void setActors(Set<Actor> actors) {
-        this.actors = actors;
-    }
+    public void setMovies(Set<Movie> movies) {
+        this.movies = movies;
+    }*/
 }

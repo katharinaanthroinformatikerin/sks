@@ -6,24 +6,18 @@ import java.util.List;
 import java.util.Set;
 
 @NamedQuery(name = "Actor.checkDependencyActors",
-        query = "SELECT a FROM Actor a WHERE a.surname = :surname " +
-                "AND a.firstName = :firstName")
+        query = "SELECT a FROM Actor a WHERE a.lastname = :lastname " +
+                "AND a.firstname = :firstname")
 @Entity
 @Table(name = "actor")
 public class Actor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String surname;
-    private String firstName;
-    private int sex;
-    private Date dateOfBirth;
-
-    @ManyToMany(mappedBy = "actors")
-    private Set<Studio> studios;
-
-    @ManyToMany(mappedBy = "actors")
-    private Set<Film> films;
+    private String lastname;
+    private String firstname;
+    private Sex sex;
+    private Date birthdate;
 
     public Actor(){}
 
@@ -35,51 +29,35 @@ public class Actor {
         this.id = id;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setLastname(String surname) {
+        this.lastname = surname;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public int getSex() {
+    public Sex getSex() {
         return sex;
     }
 
-    public void setSex(int sex) {
+    public void setSex(Sex sex) {
         this.sex = sex;
     }
 
-    public Date getDateOfBirth() {
-        return dateOfBirth;
+    public Date getBirthdate() {
+        return birthdate;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public Set<Studio> getStudios() {
-        return studios;
-    }
-
-    public void setStudios(Set<Studio> studios) {
-        this.studios = studios;
-    }
-
-    public Set<Film> getFilms() {
-        return films;
-    }
-
-    public void setFilms(Set<Film> films) {
-        this.films = films;
+    public void setBirthdate(Date dateOfBirth) {
+        this.birthdate = dateOfBirth;
     }
 }

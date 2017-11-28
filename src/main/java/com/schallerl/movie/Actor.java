@@ -1,13 +1,13 @@
 package com.schallerl.movie;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-@NamedQuery(name = "Actor.checkDependencyActors",
-        query = "SELECT a FROM Actor a WHERE a.lastname = :lastname " +
-                "AND a.firstname = :firstname")
+@XmlRootElement
+@NamedQuery(name = "Actor.checkDependencyActors", query = "SELECT a FROM Actor a WHERE a.lastname = :lastname " + "AND a.firstname = :firstname")
 @Entity
 @Table(name = "actor")
 public class Actor {

@@ -1,12 +1,16 @@
 package com.schallerl.movie;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
 @XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 @NamedQuery(name = "Actor.checkDependencyActors", query = "SELECT a FROM Actor a WHERE a.lastname = :lastname " + "AND a.firstname = :firstname")
 @Entity
 @Table(name = "actor")
@@ -14,9 +18,17 @@ public class Actor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @XmlAttribute
     private String lastname;
+
+    @XmlAttribute
     private String firstname;
+
+    @XmlAttribute
     private Sex sex;
+
+    @XmlAttribute
     private Date birthdate;
 
     public Actor(){}

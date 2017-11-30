@@ -1,8 +1,12 @@
 package com.schallerl.movie;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import java.util.Set;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 @NamedQuery(name = "Studio.checkDependencyStudio", query = "SELECT s FROM Studio s WHERE s.name = :studioName")
 @Entity
 @Table(name = "studio")
@@ -10,8 +14,14 @@ public class Studio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @XmlAttribute
     private String name;
+
+    @XmlAttribute
     private String countrycode;
+
+    @XmlAttribute
     private String postcode;
 
     /*@OneToMany(mappedBy = "studio")

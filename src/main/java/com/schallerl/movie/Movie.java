@@ -1,10 +1,7 @@
 package com.schallerl.movie;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.*;
 import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -16,11 +13,20 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @XmlAttribute
     private String title;
+
+    @XmlAttribute(name="releaseyear")
     private Integer releaseYear;
+
+    @XmlAttribute
     @Column(length=1024)
     private String description;
-    private String genre;
+
+    @XmlAttribute
+    private Genre genre;
+
+    @XmlAttribute
     private Integer length;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -87,11 +93,11 @@ public class Movie {
         this.releaseYear = releaseYear;
     }
 
-    public String getGenre() {
+    public Genre getGenre() {
         return genre;
     }
 
-    public void setGenre(String genre) {
+    public void setGenre(Genre genre) {
         this.genre = genre;
     }
 

@@ -29,7 +29,7 @@ public class Actor {
     private Sex sex;
 
     @XmlAttribute
-    private Date birthdate;
+    private String birthdate;
 
     public Actor(){}
 
@@ -65,11 +65,11 @@ public class Actor {
         this.sex = sex;
     }
 
-    public Date getBirthdate() {
+    public String getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(Date dateOfBirth) {
+    public void setBirthdate(String dateOfBirth) {
         this.birthdate = dateOfBirth;
     }
 }

@@ -1,13 +1,25 @@
 package com.schallerl.movie;
 
+import javax.enterprise.inject.Any;
 import javax.persistence.*;
 import javax.xml.bind.annotation.*;
 import java.util.List;
 
+
 @XmlAccessorType(XmlAccessType.FIELD)
-@NamedQuery(name = "Movie.searchByTitleParts", query = "SELECT f FROM Movie f WHERE f.title LIKE :titleParts")
+@XmlRootElement
 @Entity
 @Table(name = "movie")
+@NamedQueries({
+        @NamedQuery(
+                name = "Movie.searchByTitleParts",
+                query = "SELECT f FROM Movie f WHERE f.title LIKE :titleParts"
+        ),
+        @NamedQuery(
+                name="Movie.selectAll",
+                query="SELECT n FROM Movie n"
+        )
+})
 public class Movie {
     //creates an id at db-level
     @Id

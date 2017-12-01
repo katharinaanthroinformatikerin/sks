@@ -18,6 +18,12 @@ public class MovieService {
 
     public MovieService(){}
 
+    public List<Movie> getAllMovies() {
+        return em.createNamedQuery("Movie.selectAll", Movie.class)
+                .getResultList();
+    }
+
+
     public List<Movie> searchByTitleParts(String titleParts){
         TypedQuery<Movie> q = em.createNamedQuery("Movie.searchByTitleParts", Movie.class);
         //setting search parameter:
@@ -62,6 +68,7 @@ public class MovieService {
                             log.info("firstname and/or lastname are missing.");
                             throw new EntityNotFoundException();
                         } else {
+                            log.info("looking for actor named " + actor.getLastname() + " " + actor.getFirstname());
                             String lastname = actor.getLastname();
                             String firstname = actor.getFirstname();
                             TypedQuery<Actor> q2 = em.createNamedQuery("Actor.checkDependencyActors", Actor.class);

@@ -7,34 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57a8e434-ba7a-4cf1-8784-ff7bad815019" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieResource.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/schallerl/movie/Movies.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/Movies.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/schallerl/movie/Movies.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MovieServiceWebApp.war" afterPath="$PROJECT_DIR$/target/MovieServiceWebApp.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/Actor.class" afterPath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/Actor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/Genre.class" afterPath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/Genre.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/Movie.class" afterPath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/Movie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/MovieResourceApplication.class" afterPath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/MovieResourceApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/MovieService.class" afterPath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/MovieService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/MovieWebService.class" afterPath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/MovieWebService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/Sex.class" afterPath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/Sex.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/Studio.class" afterPath="$PROJECT_DIR$/target/MovieServiceWebApp/WEB-INF/classes/com/schallerl/movie/Studio.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/schallerl/movie/Actor.class" afterPath="$PROJECT_DIR$/target/classes/com/schallerl/movie/Actor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/schallerl/movie/Genre.class" afterPath="$PROJECT_DIR$/target/classes/com/schallerl/movie/Genre.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/schallerl/movie/Movie.class" afterPath="$PROJECT_DIR$/target/classes/com/schallerl/movie/Movie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/schallerl/movie/MovieResourceApplication.class" afterPath="$PROJECT_DIR$/target/classes/com/schallerl/movie/MovieResourceApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/schallerl/movie/MovieService.class" afterPath="$PROJECT_DIR$/target/classes/com/schallerl/movie/MovieService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/schallerl/movie/MovieWebService.class" afterPath="$PROJECT_DIR$/target/classes/com/schallerl/movie/MovieWebService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/schallerl/movie/Sex.class" afterPath="$PROJECT_DIR$/target/classes/com/schallerl/movie/Sex.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/schallerl/movie/Studio.class" afterPath="$PROJECT_DIR$/target/classes/com/schallerl/movie/Studio.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MovieServiceWebApp.iml" afterPath="$PROJECT_DIR$/MovieServiceWebApp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/schallerl/movie/Actor.java" afterPath="$PROJECT_DIR$/src/main/java/com/schallerl/movie/Actor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/schallerl/movie/Movie.java" afterPath="$PROJECT_DIR$/src/main/java/com/schallerl/movie/Movie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieService.java" afterPath="$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieWebService.java" afterPath="$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieWebService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,8 +25,8 @@
       <file leaf-file-name="Movie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/Movie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+            <state relative-caret-position="200">
+              <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieWebService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MovieWebService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieWebService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+            <state relative-caret-position="244">
+              <caret line="33" column="75" lean-forward="false" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,7 +89,7 @@
       <file leaf-file-name="MovieService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1750">
+            <state relative-caret-position="1575">
               <caret line="70" column="114" lean-forward="false" selection-start-line="70" selection-start-column="114" selection-end-line="70" selection-end-column="114" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -124,13 +98,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieResource.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MovieResource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieResource.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="511">
               <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Movies.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/Movies.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#454#455#0" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
+                <element signature="e#557#558#0" expanded="true" />
+                <element signature="e#606#607#0" expanded="true" />
+                <element signature="e#642#643#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -178,13 +170,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/schallerl/movie/Studio.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/schallerl/movie/Genre.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/schallerl/movie/Movies.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieWebService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/schallerl/movie/Movie.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/schallerl/movie/Actor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/schallerl/movie/Movies.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieWebService.java" />
       </list>
     </option>
   </component>
@@ -227,22 +219,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="MovieServiceWebApp" type="cbb8eebc:String" user="MovieServiceWebApp" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="MovieServiceWebApp" type="cbb8eebc:String" user="MovieServiceWebApp" />
-              <item name="src/main" type="cbb8eebc:String" user="src/main" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -280,6 +256,22 @@
             <path>
               <item name="MovieServiceWebApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="MovieServiceWebApp" type="cbb8eebc:String" user="MovieServiceWebApp" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="MovieServiceWebApp" type="cbb8eebc:String" user="MovieServiceWebApp" />
+              <item name="src/main" type="cbb8eebc:String" user="src/main" />
             </path>
           </expand>
           <select />
@@ -502,11 +494,12 @@
       <workItem from="1511990714940" duration="7718000" />
       <workItem from="1512148111706" duration="16739000" />
       <workItem from="1512170973829" duration="69000" />
+      <workItem from="1512214377475" duration="1577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71079000" />
+    <option name="totallyTimeSpent" value="72656000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -535,6 +528,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.49783784" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2841855" sideWeight="0.31675676" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.49783784" order="7" side_tool="false" content_ui="tabs" />
@@ -543,7 +537,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.49567568" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3356757" sideWeight="0.49405771" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3416216" sideWeight="0.49405771" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.39375" sideWeight="0.5059423" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -552,7 +546,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2841855" sideWeight="0.31675676" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.48756757" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -570,16 +563,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/Studio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1225">
-          <caret line="66" column="7" lean-forward="false" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieWebService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -832,13 +815,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
@@ -946,19 +929,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieWebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1750">
+        <state relative-caret-position="1575">
           <caret line="70" column="114" lean-forward="false" selection-start-line="70" selection-start-column="114" selection-end-line="70" selection-end-column="114" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -982,20 +955,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/Movie.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="21" column="2" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+        <state relative-caret-position="511">
+          <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="32" />
+        <state relative-caret-position="200">
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/Movies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/schallerl/movie/MovieWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="33" column="75" lean-forward="false" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

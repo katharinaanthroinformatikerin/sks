@@ -23,15 +23,15 @@ public class MovieWebService {
     //Business methods that are exposed to web service clients must be annotated with javax.jws.WebMethod
     @WebMethod
     @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
-    public @WebResult(name = "movies") List<Movie> searchFilms(String titleParts){
+    public @WebResult(name = "movies") Movies searchFilms(String titleParts){
         System.out.println("MovieWebService: searchMovies() " + titleParts);
-        return movieservice.searchByTitleParts(titleParts);
+        return new Movies(movieservice.searchByTitleParts(titleParts));
     }
 
     @WebMethod
     @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
-    public String importMovies(List<Movie> moviesToImport){
-        log.info("in Methode importMovies()." + moviesToImport.size());
-        return movieservice.importMovies(moviesToImport);
+    public String importMovies(Movies moviesToImport){
+        log.info("in Methode importMovies()." + moviesToImport.getMovies().size());
+        return movieservice.importMovies(moviesToImport.getMovies());
     }
 }

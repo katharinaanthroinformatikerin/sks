@@ -7,7 +7,14 @@ import javax.xml.bind.annotation.XmlAttribute;
 import java.util.Set;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@NamedQuery(name = "Studio.checkDependencyStudio", query = "SELECT s FROM Studio s WHERE s.name = :studioName")
+@NamedQueries({
+        @NamedQuery(
+                name = "Studio.checkDependencyStudio",
+                query = "SELECT s FROM Studio s WHERE s.name = :studioName"),
+        @NamedQuery(
+                name = "Studio.selectAll",
+                query = "SELECT s FROM Studio s")
+})
 @Entity
 @Table(name = "studio")
 public class Studio {

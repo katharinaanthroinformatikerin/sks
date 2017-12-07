@@ -23,7 +23,6 @@ public class MovieService {
                 .getResultList();
     }
 
-
     public List<Movie> searchByTitleParts(String titleParts){
         TypedQuery<Movie> q = em.createNamedQuery("Movie.searchByTitleParts", Movie.class);
         //setting search parameter:

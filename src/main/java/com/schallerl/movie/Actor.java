@@ -5,16 +5,23 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@NamedQuery(name = "Actor.checkDependencyActors", query = "SELECT a FROM Actor a WHERE a.lastname = :lastname " + "AND a.firstname = :firstname")
+@NamedQueries({
+        @NamedQuery(
+                name = "Actor.checkDependencyActors",
+                query = "SELECT a FROM Actor a WHERE a.lastname = :lastname " + "AND a.firstname = :firstname"
+        ),
+        @NamedQuery(
+                name = "Actor.selectAll",
+                query = "SELECT a FROM Actor a"
+        )
+})
 @Entity
 @Table(name = "actor")
 public class Actor {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,7 +36,7 @@ public class Actor {
     private Sex sex;
 
     @XmlAttribute
-    private String birthdate;
+    private String dateofbirth;
 
     public Actor(){}
 
@@ -65,11 +72,11 @@ public class Actor {
         this.sex = sex;
     }
 
-    public String getBirthdate() {
-        return birthdate;
+    public String getDateofbirth() {
+        return dateofbirth;
     }
 
-    public void setBirthdate(String dateOfBirth) {
-        this.birthdate = dateOfBirth;
+    public void setDateofbirth(String dateOfBirth) {
+        this.dateofbirth = dateOfBirth;
     }
 }

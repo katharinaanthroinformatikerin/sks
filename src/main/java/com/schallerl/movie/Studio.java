@@ -43,6 +43,8 @@ public class Studio {
 
     public Studio(){}
 
+    public Studio(String name, String countrycode, String postcode){}
+
     public Long getId() {
         return id;
     }
@@ -74,12 +76,4 @@ public class Studio {
     public void setPostcode(String zipcode) {
         this.postcode = zipcode;
     }
-/*
-    public Set<Movie> getMovies() {
-        return movies;
-    }
-
-    public void setMovies(Set<Movie> movies) {
-        this.movies = movies;
-    }*/
 }

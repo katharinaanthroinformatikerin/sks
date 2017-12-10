@@ -5,6 +5,10 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.time.LocalDate;
+import java.util.Date;
+
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -36,7 +40,8 @@ public class Actor {
     private Sex sex;
 
     @XmlAttribute
-    private String dateofbirth;
+    @XmlJavaTypeAdapter(DateAdapter.class)
+    private Date birthdate;
 
     public Actor(){}
 
@@ -72,11 +77,12 @@ public class Actor {
         this.sex = sex;
     }
 
-    public String getDateofbirth() {
-        return dateofbirth;
+    public Date getBirthdate() {
+        return this.birthdate;
     }
 
-    public void setDateofbirth(String dateOfBirth) {
-        this.dateofbirth = dateOfBirth;
+    public void setBirthdate(Date birthdate) {
+
+        this.birthdate = birthdate;
     }
 }

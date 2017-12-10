@@ -47,7 +47,7 @@ public class ActorResource {
             actorBeforeUpdate.setFirstname(actor.getFirstname());
             actorBeforeUpdate.setLastname(actor.getLastname());
             actorBeforeUpdate.setSex(actor.getSex());
-            actorBeforeUpdate.setDateofbirth(actor.getDateofbirth());
+            actorBeforeUpdate.setBirthdate(actor.getBirthdate());
         }
         else {
             throw new WebApplicationException(Response.Status.NOT_FOUND);

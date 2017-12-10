@@ -56,7 +56,6 @@ public class MovieService {
                 q1.setParameter("studioName", studioName);
                 Studio storedStudio = q1.getSingleResult();
                 studio.setId(storedStudio.getId());
-
                 if(movie.getActorList() == null){
                     log.info("no actors");
                     throw new EntityNotFoundException();

@@ -16,6 +16,7 @@ public class ResponseFilter implements ContainerResponseFilter {
         MultivaluedMap<String, Object> headers = response.getHeaders();
         //instead of *, address of the caller
         headers.add("Access-Control-Allow-Origin", "*");
+        headers.add("Access-Control-Allow-Headers", "Authorization");
         headers.add("Access-Control-Allow-Methods", "DELETE, GET, OPTIONS, POST, PUT");
         //caching deactivated
         CacheControl cacheControl = new CacheControl();

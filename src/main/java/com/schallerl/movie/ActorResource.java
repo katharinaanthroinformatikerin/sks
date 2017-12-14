@@ -1,5 +1,8 @@
 package com.schallerl.movie;
 
+import org.jboss.ejb3.annotation.SecurityDomain;
+
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -14,6 +17,7 @@ import java.util.List;
 
 @Path("/actor")
 @Transactional
+@SecurityDomain("MovieSD")
 public class ActorResource {
 
     @PersistenceContext
@@ -24,6 +28,7 @@ public class ActorResource {
     private ActorService actorService;
 
     @POST
+    @RolesAllowed("MSWrite")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response create(Actor actor) {
         em.persist(actor);
@@ -32,6 +37,7 @@ public class ActorResource {
     }
 
     @GET
+    @RolesAllowed({"MSRead", "MSWrite"})
     @Path("/{actorId}")
     @Produces(MediaType.APPLICATION_JSON)
     public Actor retrieveAsJSONXML(@PathParam("actorId") Long actorId) {
@@ -39,6 +45,7 @@ public class ActorResource {
     }
 
     @PUT
+    @RolesAllowed("MSWrite")
     @Path("/{actorId}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void update(@PathParam("actorId") Long actorId, Actor actor) {
@@ -55,6 +62,7 @@ public class ActorResource {
     }
 
     @DELETE
+    @RolesAllowed("MSWrite")
     @Path("/{actorId}")
     public void delete(@PathParam("actorId") Long actorId) {
         Actor actor = em.find(Actor.class, actorId);
@@ -67,6 +75,7 @@ public class ActorResource {
     }
 
     @GET
+    @RolesAllowed({"MSRead", "MSWrite"})
     @Produces(MediaType.APPLICATION_JSON)
     public List<Actor> getAll() {
         return actorService.getAllActors();

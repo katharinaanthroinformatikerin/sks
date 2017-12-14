@@ -1,5 +1,8 @@
 package com.schallerl.movie;
 
+import org.jboss.ejb3.annotation.SecurityDomain;
+
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityNotFoundException;
@@ -10,6 +13,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 @Stateless
+@SecurityDomain("MovieSD")
 public class MovieService {
 
     private static final Logger log = Logger.getLogger("MovieService");
@@ -18,11 +22,13 @@ public class MovieService {
 
     public MovieService(){}
 
+    @RolesAllowed({"MSRead", "MSWrite"})
     public List<Movie> getAllMovies() {
         return em.createNamedQuery("Movie.selectAll", Movie.class)
                 .getResultList();
     }
 
+    @RolesAllowed({"MSRead", "MSWrite"})
     public List<Movie> searchByTitleParts(String titleParts){
         TypedQuery<Movie> q = em.createNamedQuery("Movie.searchByTitleParts", Movie.class);
         //setting search parameter:
@@ -36,6 +42,7 @@ public class MovieService {
 
     //all of the movies - or none - have to be inserted
     @Transactional
+    @RolesAllowed("MSWrite")
     public String importMovies(List<Movie> moviesToImport) {
         log.info("in method importMovies");
 

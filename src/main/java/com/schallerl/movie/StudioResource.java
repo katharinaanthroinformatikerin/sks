@@ -1,5 +1,8 @@
 package com.schallerl.movie;
 
+import org.jboss.ejb3.annotation.SecurityDomain;
+
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -13,6 +16,7 @@ import java.net.URI;
 import java.util.List;
 
 @Path("/studio")
+@SecurityDomain("MovieSD")
 public class StudioResource {
     @PersistenceContext
     private EntityManager em;
@@ -22,15 +26,18 @@ public class StudioResource {
     private StudioService studioService;
 
     @POST
+    @RolesAllowed("MSWrite")
     @Transactional
     @Consumes(MediaType.APPLICATION_JSON)
     public Response create(Studio studio) {
-        em.persist(studio);
-        URI uri = uriInfo.getAbsolutePathBuilder().path(studio.getId().toString()).build();
+        //em.persist(studio);
+        Studio createdStudio = studioService.createStudio(studio);
+        URI uri = uriInfo.getAbsolutePathBuilder().path(createdStudio.getId().toString()).build();
         return Response.created(uri).build();
     }
 
     @GET
+    @RolesAllowed({"MSRead", "MSWrite"})
     @Path("/{studioId}")
     @Produces(MediaType.APPLICATION_JSON)
     public Studio retrieveAsJSONXML(@PathParam("studioId") Long studioId) {
@@ -38,6 +45,7 @@ public class StudioResource {
     }
 
     @PUT
+    @RolesAllowed("MSWrite")
     @Path("/{studioId}")
     @Transactional
     @Consumes(MediaType.APPLICATION_JSON)
@@ -54,6 +62,7 @@ public class StudioResource {
     }
 
     @DELETE
+    @RolesAllowed("MSWrite")
     @Transactional
     @Path("/{studioId}")
     public void delete(@PathParam("studioId") Long studioId) {
@@ -67,6 +76,7 @@ public class StudioResource {
     }
 
     @GET
+    @RolesAllowed({"MSRead", "MSWrite"})
     @Produces(MediaType.APPLICATION_JSON)
     public List<Studio> getAll() {
         return studioService.getAllStudios();

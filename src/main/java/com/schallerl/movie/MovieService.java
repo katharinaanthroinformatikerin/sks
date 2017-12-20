@@ -93,4 +93,33 @@ public class MovieService {
         }
         return "Movie(s) imported.";
     }
+
+    @RolesAllowed("MSWrite")
+    public Movie save(Movie movie) {
+        em.persist(movie);
+        return movie;
+    }
+
+    @RolesAllowed({"MSRead", "MSWrite"})
+    public Movie find(Long movieId) {
+        return em.find(Movie.class, movieId);
+    }
+
+    @RolesAllowed("MSWrite")
+    public void update(Movie movieOld, Movie movieToUpdate) {
+        movieOld.setTitle(movieToUpdate.getTitle());
+        movieOld.setStudio(movieToUpdate.getStudio());
+        movieOld.setReleaseYear(movieToUpdate.getReleaseYear());
+        movieOld.setLength(movieToUpdate.getLength());
+        movieOld.setDescription(movieToUpdate.getDescription());
+        movieOld.setActorList(movieToUpdate.getActorList());
+        movieOld.setGenre(movieToUpdate.getGenre());
+
+        em.merge(movieOld);
+    }
+
+    @RolesAllowed("MSWrite")
+    public void remove(Movie movie) {
+        em.remove(movie);
+    }
 }

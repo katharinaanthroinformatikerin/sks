@@ -23,4 +23,29 @@ public class ActorService {
         return em.createNamedQuery("Actor.selectAll", Actor.class)
                 .getResultList();
     }
+
+    @RolesAllowed("MSWrite")
+    public Actor save(Actor actor) {
+        em.persist(actor);
+        return actor;
+    }
+
+    @RolesAllowed({"MSWrite", "MSRead"})
+    public Actor find(Long actorId) {
+        return em.find(Actor.class, actorId);
+    }
+
+    @RolesAllowed("MSWrite")
+    public void update(Actor actorBeforeUpdate, Actor actor) {
+        actorBeforeUpdate.setFirstname(actor.getFirstname());
+        actorBeforeUpdate.setLastname(actor.getLastname());
+        actorBeforeUpdate.setSex(actor.getSex());
+        actorBeforeUpdate.setBirthdate(actor.getBirthdate());
+        em.merge(actorBeforeUpdate);
+    }
+
+    @RolesAllowed("MSWrite")
+    public void remove(Actor actor) {
+        em.remove(actor);
+    }
 }

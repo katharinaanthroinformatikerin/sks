@@ -20,41 +20,45 @@ import java.util.List;
 @SecurityDomain("MovieSD")
 public class ActorResource {
 
-    @PersistenceContext
-    private EntityManager em;
+    //@PersistenceContext
+    //private EntityManager em;
     @Context
     private UriInfo uriInfo;
     @Inject
     private ActorService actorService;
 
     @POST
-    @RolesAllowed("MSWrite")
+    //@RolesAllowed("MSWrite")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response create(Actor actor) {
-        em.persist(actor);
-        URI uri = uriInfo.getAbsolutePathBuilder().path(actor.getId().toString()).build();
+        //em.persist(actor);
+        Actor createdActor = actorService.save(actor);
+        URI uri = uriInfo.getAbsolutePathBuilder().path(createdActor.getId().toString()).build();
         return Response.created(uri).build();
     }
 
     @GET
-    @RolesAllowed({"MSRead", "MSWrite"})
+    //@RolesAllowed({"MSRead", "MSWrite"})
     @Path("/{actorId}")
     @Produces(MediaType.APPLICATION_JSON)
     public Actor retrieveAsJSONXML(@PathParam("actorId") Long actorId) {
-        return em.find(Actor.class, actorId);
+        //return em.find(Actor.class, actorId);
+        Actor actor = actorService.find(actorId);
+        if (actor != null){
+            return actor;
+        } else {
+            throw new WebApplicationException(Response.Status.NOT_FOUND);
+        }
     }
 
     @PUT
-    @RolesAllowed("MSWrite")
+    //@RolesAllowed("MSWrite")
     @Path("/{actorId}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void update(@PathParam("actorId") Long actorId, Actor actor) {
-        Actor actorBeforeUpdate = em.find(Actor.class, actorId);
+        Actor actorBeforeUpdate = actorService.find(actorId);
         if (actorBeforeUpdate != null) {
-            actorBeforeUpdate.setFirstname(actor.getFirstname());
-            actorBeforeUpdate.setLastname(actor.getLastname());
-            actorBeforeUpdate.setSex(actor.getSex());
-            actorBeforeUpdate.setBirthdate(actor.getBirthdate());
+            actorService.update(actorBeforeUpdate, actor);
         }
         else {
             throw new WebApplicationException(Response.Status.NOT_FOUND);
@@ -62,12 +66,12 @@ public class ActorResource {
     }
 
     @DELETE
-    @RolesAllowed("MSWrite")
+    //@RolesAllowed("MSWrite")
     @Path("/{actorId}")
     public void delete(@PathParam("actorId") Long actorId) {
-        Actor actor = em.find(Actor.class, actorId);
+        Actor actor = actorService.find(actorId);
         if (actor != null) {
-            em.remove(actor);
+            actorService.remove(actor);
         }
         else {
             throw new WebApplicationException(Response.Status.NOT_FOUND);
@@ -75,7 +79,7 @@ public class ActorResource {
     }
 
     @GET
-    @RolesAllowed({"MSRead", "MSWrite"})
+    //@RolesAllowed({"MSRead", "MSWrite"})
     @Produces(MediaType.APPLICATION_JSON)
     public List<Actor> getAll() {
         return actorService.getAllActors();

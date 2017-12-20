@@ -18,57 +18,64 @@ import java.util.List;
 @Path("/studio")
 @SecurityDomain("MovieSD")
 public class StudioResource {
-    @PersistenceContext
-    private EntityManager em;
+    //@PersistenceContext
+    //private EntityManager em;
     @Context
     private UriInfo uriInfo;
     @Inject
     private StudioService studioService;
 
     @POST
-    @RolesAllowed("MSWrite")
+    //@RolesAllowed("MSWrite")
     @Transactional
     @Consumes(MediaType.APPLICATION_JSON)
     public Response create(Studio studio) {
         //em.persist(studio);
-        Studio createdStudio = studioService.createStudio(studio);
+        Studio createdStudio = studioService.create(studio);
         URI uri = uriInfo.getAbsolutePathBuilder().path(createdStudio.getId().toString()).build();
         return Response.created(uri).build();
     }
 
     @GET
-    @RolesAllowed({"MSRead", "MSWrite"})
+    //@RolesAllowed({"MSRead", "MSWrite"})
     @Path("/{studioId}")
     @Produces(MediaType.APPLICATION_JSON)
     public Studio retrieveAsJSONXML(@PathParam("studioId") Long studioId) {
-        return em.find(Studio.class, studioId);
-    }
-
-    @PUT
-    @RolesAllowed("MSWrite")
-    @Path("/{studioId}")
-    @Transactional
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void update(@PathParam("studioId") Long studioId, Studio studio) {
-        Studio studioBeforeUpdate = em.find(Studio.class, studioId);
-        if (studioBeforeUpdate != null) {
-            studioBeforeUpdate.setName(studio.getName());
-            studioBeforeUpdate.setPostcode(studio.getPostcode());
-            studioBeforeUpdate.setCountrycode(studio.getCountrycode());
-        }
-        else {
+        //return em.find(Studio.class, studioId);
+        Studio studio = studioService.find(studioId);
+        if (studio != null){
+            return studio;
+        } else {
             throw new WebApplicationException(Response.Status.NOT_FOUND);
         }
     }
 
+    @PUT
+    //@RolesAllowed("MSWrite")
+    @Path("/{studioId}")
+    @Transactional
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void update(@PathParam("studioId") Long studioId, Studio studio) {
+        Studio studioBeforeUpdate = studioService.find(studioId);
+        if (studioBeforeUpdate != null) {
+            studioService.update(studioBeforeUpdate, studio);
+        }
+        else {
+            throw new WebApplicationException(Response.Status.NOT_FOUND);
+        }
+
+    }
+
     @DELETE
-    @RolesAllowed("MSWrite")
+    //@RolesAllowed("MSWrite")
     @Transactional
     @Path("/{studioId}")
     public void delete(@PathParam("studioId") Long studioId) {
-        Studio studio = em.find(Studio.class, studioId);
+        //Studio studio = em.find(Studio.class, studioId);
+        Studio studio = studioService.find(studioId);
         if (studio != null) {
-            em.remove(studio);
+            //em.remove(studio);
+            studioService.remove(studio);
         }
         else {
             throw new WebApplicationException(Response.Status.NOT_FOUND);
@@ -76,7 +83,7 @@ public class StudioResource {
     }
 
     @GET
-    @RolesAllowed({"MSRead", "MSWrite"})
+    //@RolesAllowed({"MSRead", "MSWrite"})
     @Produces(MediaType.APPLICATION_JSON)
     public List<Studio> getAll() {
         return studioService.getAllStudios();

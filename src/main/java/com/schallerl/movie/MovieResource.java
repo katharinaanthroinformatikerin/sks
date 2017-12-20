@@ -15,8 +15,8 @@ import java.util.List;
 @Path("/movies")
 @Transactional
 public class MovieResource {
-    @PersistenceContext
-    private EntityManager em;
+    //@PersistenceContext
+    //private EntityManager em;
     @Context
     private UriInfo uriInfo;
     @Inject
@@ -25,8 +25,9 @@ public class MovieResource {
     @POST
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response create(Movie movie) {
-        em.persist(movie);
-        URI uri = uriInfo.getAbsolutePathBuilder().path(movie.getId().toString()).build();
+        //em.persist(movie);
+        Movie createdMovie = movieService.save(movie);
+        URI uri = uriInfo.getAbsolutePathBuilder().path(createdMovie.getId().toString()).build();
         return Response.created(uri).build();
     }
 
@@ -34,7 +35,13 @@ public class MovieResource {
     @Path("/{movieId}")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Movie retrieveAsJSONXML(@PathParam("movieId") Long movieId) {
-        return em.find(Movie.class, movieId);
+        //return em.find(Movie.class, movieId);
+        Movie movie = movieService.find(movieId);
+        if (movie != null){
+            return movie;
+        } else {
+            throw new WebApplicationException(Response.Status.NOT_FOUND);
+        }
     }
 
 /*    @GET
@@ -49,15 +56,10 @@ public class MovieResource {
     @Path("/{movieId}")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public void update(@PathParam("movieId") Long movieId, Movie movie) {
-        Movie movieOld = em.find(Movie.class, movieId);
+        //Movie movieOld = em.find(Movie.class, movieId);
+        Movie movieOld = movieService.find(movieId);
         if (movieOld != null) {
-            movieOld.setTitle(movie.getTitle());
-            movieOld.setStudio(movie.getStudio());
-            movieOld.setReleaseYear(movie.getReleaseYear());
-            movieOld.setLength(movie.getLength());
-            movieOld.setDescription(movie.getDescription());
-            movieOld.setActorList(movie.getActorList());
-            movieOld.setGenre(movie.getGenre());
+            movieService.update(movieOld, movie);
         }
         else {
             throw new WebApplicationException(Response.Status.NOT_FOUND);
@@ -67,9 +69,12 @@ public class MovieResource {
     @DELETE
     @Path("/{movieId}")
     public void delete(@PathParam("movieId") Long movieId) {
-        Movie movie = em.find(Movie.class, movieId);
+        //Movie movie = em.find(Movie.class, movieId);
+        Movie movie = movieService.find(movieId);
+
         if (movie != null) {
-            em.remove(movie);
+            //em.remove(movie);
+            movieService.remove(movie);
         }
         else {
             throw new WebApplicationException(Response.Status.NOT_FOUND);
